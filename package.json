@@ -13,9 +13,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint:fix"
+      "pre-commit": "lint-staged"
     }
   },
+  "lint-staged": {
+    "*.ts": [
+      "npm run lint:fix"
+    ]
+  }
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
