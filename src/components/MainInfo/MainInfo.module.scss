@@ -1,0 +1,76 @@
+@import url(../../constants/globalVariables.scss);
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.cover {
+  background-color: #4158f6;
+  padding: 125px 0 33px 78px;
+  padding: 125px var(--side-padding) 33px;
+}
+
+.userInfo {
+  margin-left: 78px;
+  margin-right: auto;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badge {
+  width: 70px;
+}
+
+.icon {
+  background-color: #e8edf1;
+  fill: #b3b3b3;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+}
+
+.contentBox {
+  padding: 0 var(--side-padding) 41px;
+  display: flex;
+  background-color: #e8edf1;
+
+  flex-grow: 1;
+}
+
+.sideBar {
+  margin-top: 40px;
+  margin-left: 50px;
+}
+
+.navBox {
+  display: flex;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.navText {
+  margin-left: 33px;
+}
+
+.navIcon {
+  fill: #c2c9ce;
+}
+
+.adminBox {
+  margin: 50px 0;
+}
+
+.adminText {
+  margin-left: 17px;
+}

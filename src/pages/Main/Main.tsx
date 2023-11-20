@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import MainInfo from '../../components/Header/MainInfo/MainInfo';
+import MainInfo from '../../components/MainInfo/MainInfo';
 
 const Main: FC = () => {
   return (

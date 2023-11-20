@@ -5,7 +5,10 @@ import HelmetImage from '../../assets/icons/helmet.svg?react';
 import VkIcon from '../../assets/icons/vk.svg?react';
 import FbIcon from '../../assets/icons/fb.svg?react';
 import GoogleIcon from '../../assets/icons/google.svg?react';
-import { Button, TextField, Typography } from '@mui/material';
+import LoginAccentText from '../../UI/Texts/LoginAccentText';
+import LogitTitleText from '../../UI/Texts/LoginTitleText';
+import LoginButtomText from '../../UI/Texts/LoginButtomText';
+import { Button, TextField } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 const Login: FC = () => {
@@ -19,28 +22,16 @@ const Login: FC = () => {
     <main className={style.login}>
       <section className={style.container}>
         <HelmetImage />
-        <Typography
-          margin="16px 0 0"
-          color="#4158F6"
-          fontWeight={700}
-          fontSize={14}
-          textTransform={'uppercase'}
-        >
-          Личный кабинет
-        </Typography>
-        <Typography
-          fontWeight={700}
-          fontSize={18}
-          textTransform={'uppercase'}
-          textAlign="center"
-          lineHeight="111.687%"
-        >
-          Горнолыжного курорта
-        </Typography>
+        <LoginAccentText>Личный кабинет</LoginAccentText>
+        <LogitTitleText>Горнолыжного курорта</LogitTitleText>
         <form className={style.form} onSubmit={handleSubmit}>
           <TextField placeholder="Имя"></TextField>
           <TextField placeholder="Пароль"></TextField>
-          <Button type="submit" style={{ marginTop: 40 }} variant="contained">
+          <Button
+            type="submit"
+            className={style.submitButton}
+            variant="contained"
+          >
             Войти
           </Button>
         </form>
@@ -50,14 +41,7 @@ const Login: FC = () => {
           <VkIcon />
         </div>
         <a href="/login">
-          <Typography
-            fontSize={12}
-            lineHeight="14px"
-            color="#1371FA"
-            sx={{ textDecoration: 'underline', marginTop: '27px' }}
-          >
-            Зарегистрироваться
-          </Typography>
+          <LoginButtomText>Зарегистрироваться</LoginButtomText>
         </a>
       </section>
       <img className={style.bg} src={bgImage} />

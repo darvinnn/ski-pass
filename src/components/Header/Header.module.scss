@@ -1,3 +1,9 @@
+@import url(../../constants/globalVariables.scss);
+
+.header {
+  padding: 0 var(--side-padding);
+}
+
 .toolbar {
   padding-left: 47px;
 }
