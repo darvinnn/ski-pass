@@ -1,0 +1,25 @@
+.toolbar {
+  padding-left: 47px;
+}
+
+.searchField {
+  display: flex;
+  margin-left: 80px;
+  border-radius: 10px;
+  width: 570px;
+  height: 30px;
+  background-color: #3841dc;
+  padding: 5px;
+}
+
+.searchButton {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.searchIcon {
+  width: 21px;
+  height: 21px;
+}

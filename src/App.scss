@@ -8,7 +8,6 @@ body {
   margin: 0;
 }
 
-// Инпуты
 .MuiTextField-root {
   margin-top: 12px;
   width: 100%;
@@ -25,7 +24,7 @@ body {
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 240% */
+  line-height: 24px;
   text-transform: capitalize;
 
   &::placeholder {
@@ -38,8 +37,7 @@ body {
   border: none;
 }
 
-// Кнопка
-.MuiButton-root {
+.MuiButton-contained {
   height: 46px;
   width: 169px;
   background-color: #4158f6;
@@ -56,4 +54,22 @@ body {
     box-shadow: none;
     background-color: #263dd1;
   }
+}
+
+.MuiButton-text {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: none;
+}
+
+.MuiAppBar-root {
+  background-color: #4158f6;
+  box-shadow: none;
+}
+
+.MuiSvgIcon-root {
+  fill: #eeeeee;
 }
