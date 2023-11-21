@@ -5,9 +5,8 @@ import ExitButton from '../../UI/Buttons/ExitButton';
 import SearchInput from '../../UI/Inputs/SearchInput';
 import style from './Header.module.scss';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { FC } from 'react';
 
-const Header: FC = () => {
+const Header = () => {
   const location = useLocation().pathname;
 
   const navigate = useNavigate();
@@ -21,7 +20,7 @@ const Header: FC = () => {
   return (
     <AppBar position="absolute" className={style.header}>
       <Toolbar className={style.toolbar}>
-        <IconButton size="large">
+        <IconButton sx={{ padding: 0 }} size="large">
           <Menu />
         </IconButton>
         <HeaderTitle>Горнолыжный курорт</HeaderTitle>

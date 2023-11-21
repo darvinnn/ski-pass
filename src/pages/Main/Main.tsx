@@ -1,10 +1,12 @@
-import { FC } from 'react';
 import MainInfo from '../../components/MainInfo/MainInfo';
+import BasicBlock from '../../components/BasicBlock/BasicBlock';
 
-const Main: FC = () => {
+const Main = () => {
   return (
     <>
-      <MainInfo />
+      <MainInfo>
+        <BasicBlock size="small" type="users"></BasicBlock>
+      </MainInfo>
     </>
   );
 };

@@ -14,8 +14,9 @@ import UserName from '../../UI/Texts/UserName';
 import UserProfession from '../../UI/Texts/UserProfession';
 import AdminSwitch from '../../UI/Switches/AdminSwitch';
 import AdminSwitcherText from '../../UI/Texts/AdminSwitcherText';
+import { PropsWithChildren } from 'react';
 
-const MainInfo = () => {
+const MainInfo = ({ children }: PropsWithChildren) => {
   return (
     <main className={style.main}>
       <div className={style.cover}>
@@ -59,6 +60,7 @@ const MainInfo = () => {
             <NavLinkText className={style.navText}>Настройки</NavLinkText>
           </NavLink>
         </div>
+        <div className={style.mainContent}>{children}</div>
       </div>
     </main>
   );

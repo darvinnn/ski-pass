@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import style from './Login.module.scss';
 import bgImage from '../../assets/images/login-bg.jpeg';
 import HelmetImage from '../../assets/icons/helmet.svg?react';
@@ -11,7 +10,7 @@ import LoginButtomText from '../../UI/Texts/LoginButtomText';
 import { Button, TextField } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-const Login: FC = () => {
+const Login = () => {
   const navigate = useNavigate();
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
