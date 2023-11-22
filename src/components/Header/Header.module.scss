@@ -4,9 +4,17 @@
   padding: 0 var(--side-padding);
 }
 
+.logo {
+  cursor: pointer;
+}
+
 .toolbar {
   padding-left: 47px;
   padding-right: 49px;
+}
+
+.icon {
+  fill: #eeeeee;
 }
 
 .searchField {

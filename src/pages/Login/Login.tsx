@@ -7,8 +7,10 @@ import GoogleIcon from '../../assets/icons/google.svg?react';
 import LoginAccentText from '../../UI/Texts/LoginAccentText';
 import LogitTitleText from '../../UI/Texts/LoginTitleText';
 import LoginButtomText from '../../UI/Texts/LoginButtomText';
-import { Button, TextField } from '@mui/material';
+import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import TextInput from '../../UI/Inputs/TextInput';
+import MainButton from '../../UI/Buttons/MainButton';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -24,15 +26,11 @@ const Login = () => {
         <LoginAccentText>Личный кабинет</LoginAccentText>
         <LogitTitleText>Горнолыжного курорта</LogitTitleText>
         <form className={style.form} onSubmit={handleSubmit}>
-          <TextField placeholder="Имя"></TextField>
-          <TextField placeholder="Пароль"></TextField>
-          <Button
-            type="submit"
-            className={style.submitButton}
-            variant="contained"
-          >
+          <TextInput placeholder="Имя" />
+          <TextInput placeholder="Пароль" />
+          <MainButton type="submit" className={style.submitButton}>
             Войти
-          </Button>
+          </MainButton>
         </form>
         <div className={style.links}>
           <GoogleIcon />
