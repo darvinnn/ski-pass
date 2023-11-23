@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <HeaderAppBar position="absolute" className={style.header}>
       <Toolbar className={style.toolbar}>
-        <IconButton sx={{ padding: 0 }} size="large">
+        <IconButton className={style.iconButton}>
           <Menu className={style.icon} />
         </IconButton>
         <HeaderTitle className={style.logo} onClick={handleLogo}>
@@ -36,7 +36,9 @@ const Header = () => {
           </button>
           <SearchInput placeholder="Поиск"></SearchInput>
         </form>
-        <ExitButton onClick={handleExit}>Выход</ExitButton>
+        <ExitButton onClick={handleExit} className={style.exitButton}>
+          Выход
+        </ExitButton>
       </Toolbar>
     </HeaderAppBar>
   );

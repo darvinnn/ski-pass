@@ -11,6 +11,7 @@ import {
 import { NavLink } from 'react-router-dom';
 import NavLinkText from '../../UI/Texts/NavLinkText';
 import UserName from '../../UI/Texts/UserName';
+import CaptionText from '../../UI/Texts/CaptionText';
 import UserProfession from '../../UI/Texts/UserProfession';
 import AdminSwitch from '../../UI/Switches/AdminSwitch';
 import AdminSwitcherText from '../../UI/Texts/AdminSwitcherText';
@@ -44,7 +45,7 @@ const MainInfo = ({ children }: PropsWithChildren) => {
               <RecordVoiceOver className={style.navIcon} />
               <NavLinkText className={style.navText}>Инструкторы</NavLinkText>
             </NavLink>
-            <NavLink to="/ski-pass" className={style.navBox}>
+            <NavLink to="/ski-passes" className={style.navBox}>
               <ChromeReaderMode className={style.navIcon} />
               <NavLinkText className={style.navText}>Ски-пассы</NavLinkText>
             </NavLink>
@@ -59,6 +60,9 @@ const MainInfo = ({ children }: PropsWithChildren) => {
             <SettingsOutlined className={style.navIcon} />
             <NavLinkText className={style.navText}>Настройки</NavLinkText>
           </NavLink>
+          <CaptionText className={style.caption}>
+            Все права защищены
+          </CaptionText>
         </div>
         <div className={style.mainContent}>{children}</div>
       </div>

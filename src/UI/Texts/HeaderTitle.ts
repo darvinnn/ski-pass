@@ -5,7 +5,6 @@ const HeaderTitle = styled(Typography)({
   fontWeight: '400',
   textTransform: 'uppercase',
   width: '115px',
-  marginLeft: '20px',
 });
 
 export default HeaderTitle;

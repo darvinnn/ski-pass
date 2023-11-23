@@ -1,5 +1,4 @@
 import style from './Login.module.scss';
-import bgImage from '../../assets/images/login-bg.jpeg';
 import HelmetImage from '../../assets/icons/helmet.svg?react';
 import VkIcon from '../../assets/icons/vk.svg?react';
 import FbIcon from '../../assets/icons/fb.svg?react';
@@ -7,7 +6,6 @@ import GoogleIcon from '../../assets/icons/google.svg?react';
 import LoginAccentText from '../../UI/Texts/LoginAccentText';
 import LogitTitleText from '../../UI/Texts/LoginTitleText';
 import LoginButtomText from '../../UI/Texts/LoginButtomText';
-import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import TextInput from '../../UI/Inputs/TextInput';
 import MainButton from '../../UI/Buttons/MainButton';
@@ -41,7 +39,6 @@ const Login = () => {
           <LoginButtomText>Зарегистрироваться</LoginButtomText>
         </a>
       </section>
-      <img className={style.bg} src={bgImage} />
     </main>
   );
 };

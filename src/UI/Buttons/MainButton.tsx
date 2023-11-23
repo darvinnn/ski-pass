@@ -2,8 +2,8 @@ import { Button, styled } from '@mui/material';
 import { PropsWithChildren } from 'react';
 
 interface Props {
-  type: 'submit' | 'reset' | 'button';
-  className: string;
+  type?: 'submit' | 'reset' | 'button';
+  className?: string;
 }
 
 const MainButton = (props: PropsWithChildren<Props>) => {

@@ -1,0 +1,23 @@
+.item {
+  list-style: none;
+  height: 120px;
+  border-radius: 8px;
+  background-image: linear-gradient(
+      180deg,
+      rgba(20, 135, 250, 0.7),
+      rgba(18, 94, 250, 0.7)
+    ),
+    url(../../../assets/images/login-bg.jpeg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding: 39px;
+}
+
+.moreButton {
+  fill: #fff;
+  position: absolute;
+  top: 19px;
+  right: 20px;
+  cursor: pointer;
+}

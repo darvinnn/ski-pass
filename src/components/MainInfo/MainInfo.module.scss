@@ -51,6 +51,8 @@
 .sideBar {
   margin-top: 40px;
   margin-left: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 .navBox {
@@ -68,7 +70,7 @@
 }
 
 .adminBox {
-  margin: 50px 0;
+  margin: 25px 0 50px;
 }
 
 .adminText {
@@ -78,4 +80,8 @@
 .mainContent {
   margin-left: 44px;
   transform: translateY(-170px);
+}
+
+.caption {
+  margin-top: auto;
 }

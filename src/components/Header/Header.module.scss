@@ -6,15 +6,20 @@
 
 .logo {
   cursor: pointer;
+  margin-left: 20px;
 }
 
 .toolbar {
-  padding-left: 47px;
+  padding-left: 39px;
   padding-right: 49px;
 }
 
 .icon {
   fill: #eeeeee;
+}
+
+.iconButton {
+  padding: 8px;
 }
 
 .searchField {
@@ -37,4 +42,8 @@
 .searchIcon {
   width: 21px;
   height: 21px;
+}
+
+.exitButton {
+  margin-left: 38px;
 }

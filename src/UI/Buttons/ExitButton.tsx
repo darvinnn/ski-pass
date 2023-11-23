@@ -3,12 +3,12 @@ import { Button, styled } from '@mui/material';
 import { PropsWithChildren } from 'react';
 
 interface Props {
-  onClick: () => void;
+  onClick?: () => void;
+  className?: string;
 }
 
 const ExitButton = (props: PropsWithChildren<Props>) => {
   const ExitButtonEl = styled(Button)({
-    marginLeft: 38,
     color: '#fff',
     fontSize: '14px',
     fontStyle: 'normal',
@@ -18,7 +18,7 @@ const ExitButton = (props: PropsWithChildren<Props>) => {
   });
 
   return (
-    <ExitButtonEl variant="text" startIcon={<Logout />} onClick={props.onClick}>
+    <ExitButtonEl variant="text" startIcon={<Logout />} {...props}>
       {props.children}
     </ExitButtonEl>
   );

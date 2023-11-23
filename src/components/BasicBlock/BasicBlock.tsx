@@ -1,16 +1,15 @@
 import AddButton from '../../UI/Buttons/AddButton';
 import ContentTitle from '../../UI/Texts/ContentTitle';
 import getContentInfo from '../../utils/getTitle/getContentInfo';
+import SmallBlock from '../SmallBlock/SmallBlock';
 import style from './BasicBlock.module.scss';
 
 interface Props {
   type: 'users' | 'instructors' | 'ski-passes';
   size: 'small' | 'big';
-  //TODO Типизировать согласно апи
-  data?: any;
 }
 
-const BasicBlock = ({ type, size, data }: Props) => {
+const BasicBlock = ({ type, size }: Props) => {
   const { title, buttonText } = getContentInfo(type);
   return (
     <section className={style.section}>
@@ -18,6 +17,8 @@ const BasicBlock = ({ type, size, data }: Props) => {
         <ContentTitle>{title}</ContentTitle>
         <AddButton>{buttonText}</AddButton>
       </div>
+      {size === 'small' && <SmallBlock type={type} />}
+      {/* {size === 'big' && <BigBlock />} */}
     </section>
   );
 };
