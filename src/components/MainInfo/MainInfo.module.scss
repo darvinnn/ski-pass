@@ -59,6 +59,14 @@
   display: flex;
   margin-bottom: 25px;
   align-items: center;
+  &_active {
+    .navIcon {
+      fill: #4158f6;
+    }
+    .navText {
+      color: #4158f6;
+    }
+  }
 }
 
 .navText {

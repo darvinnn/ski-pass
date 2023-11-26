@@ -9,15 +9,20 @@ import {
   SettingsOutlined,
 } from '@mui/icons-material';
 import { NavLink } from 'react-router-dom';
-import NavLinkText from '../../UI/Texts/NavLinkText';
-import UserName from '../../UI/Texts/UserName';
-import CaptionText from '../../UI/Texts/CaptionText';
-import UserProfession from '../../UI/Texts/UserProfession';
-import AdminSwitch from '../../UI/Switches/AdminSwitch';
-import AdminSwitcherText from '../../UI/Texts/AdminSwitcherText';
-import { PropsWithChildren } from 'react';
+import NavLinkText from './UI/NavLinkText';
+import UserName from './UI/UserName';
+import CaptionText from './UI/CaptionText';
+import UserProfession from './UI/UserProfession';
+import AdminSwitch from './UI/AdminSwitch';
+import AdminSwitcherText from './UI/AdminSwitcherText';
+import { PropsWithChildren, memo } from 'react';
+import {
+  INSTRUCTORS,
+  SKI_PASSES,
+  USERS,
+} from '../../constants/navigationConstants';
 
-const MainInfo = ({ children }: PropsWithChildren) => {
+const MainInfo = memo(({ children }: PropsWithChildren) => {
   return (
     <main className={style.main}>
       <div className={style.cover}>
@@ -37,15 +42,36 @@ const MainInfo = ({ children }: PropsWithChildren) => {
       <div className={style.contentBox}>
         <div className={style.sideBar}>
           <nav>
-            <NavLink to="/visitors" className={style.navBox}>
+            <NavLink
+              to={'/' + USERS}
+              className={({ isActive }) =>
+                isActive
+                  ? `${style.navBox} ${style.navBox_active}`
+                  : style.navBox
+              }
+            >
               <People className={style.navIcon} />
               <NavLinkText className={style.navText}>Посетители</NavLinkText>
             </NavLink>
-            <NavLink to="/instructors" className={style.navBox}>
+            <NavLink
+              to={'/' + INSTRUCTORS}
+              className={({ isActive }) =>
+                isActive
+                  ? `${style.navBox} ${style.navBox_active}`
+                  : style.navBox
+              }
+            >
               <RecordVoiceOver className={style.navIcon} />
               <NavLinkText className={style.navText}>Инструкторы</NavLinkText>
             </NavLink>
-            <NavLink to="/ski-passes" className={style.navBox}>
+            <NavLink
+              to={'/' + SKI_PASSES}
+              className={({ isActive }) =>
+                isActive
+                  ? `${style.navBox} ${style.navBox_active}`
+                  : style.navBox
+              }
+            >
               <ChromeReaderMode className={style.navIcon} />
               <NavLinkText className={style.navText}>Ски-пассы</NavLinkText>
             </NavLink>
@@ -68,6 +94,6 @@ const MainInfo = ({ children }: PropsWithChildren) => {
       </div>
     </main>
   );
-};
+});
 
 export default MainInfo;

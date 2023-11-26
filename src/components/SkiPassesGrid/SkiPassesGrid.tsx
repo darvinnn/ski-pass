@@ -1,10 +1,12 @@
 import style from './SkiPassesGrid.module.scss';
-import SkiPassesItem from './SkiPassesItem/SkiPassesItem';
+import SkiPassesElement from './SkiPassesElement/SkiPassesElement';
 
 const SkiPassesGrid = () => {
   return (
     <ul className={style.container}>
-      <SkiPassesItem />
+      <SkiPassesElement />
+      <SkiPassesElement />
+      <SkiPassesElement />
     </ul>
   );
 };

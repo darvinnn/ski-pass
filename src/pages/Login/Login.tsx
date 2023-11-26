@@ -3,9 +3,9 @@ import HelmetImage from '../../assets/icons/helmet.svg?react';
 import VkIcon from '../../assets/icons/vk.svg?react';
 import FbIcon from '../../assets/icons/fb.svg?react';
 import GoogleIcon from '../../assets/icons/google.svg?react';
-import LoginAccentText from '../../UI/Texts/LoginAccentText';
-import LogitTitleText from '../../UI/Texts/LoginTitleText';
-import LoginButtomText from '../../UI/Texts/LoginButtomText';
+import LoginAccentText from './UI/LoginAccentText';
+import LogitTitleText from './UI/LoginTitleText';
+import LoginButtomText from './UI/LoginButtomText';
 import { useNavigate } from 'react-router-dom';
 import TextInput from '../../UI/Inputs/TextInput';
 import MainButton from '../../UI/Buttons/MainButton';
@@ -35,7 +35,7 @@ const Login = () => {
           <FbIcon />
           <VkIcon />
         </div>
-        <a href="/login">
+        <a href="#">
           <LoginButtomText>Зарегистрироваться</LoginButtomText>
         </a>
       </section>

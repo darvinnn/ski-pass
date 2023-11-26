@@ -5,7 +5,7 @@ const LogitTitleText = styled(Typography)({
   fontWeight: '700',
   textTransform: 'uppercase',
   textAlign: 'center',
-  lineHeight: '15.636px',
+  lineHeight: '16px',
 });
 
 export default LogitTitleText;

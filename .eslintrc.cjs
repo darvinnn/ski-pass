@@ -5,6 +5,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:react/recommended',
     'prettier',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
@@ -12,6 +13,15 @@ module.exports = {
   plugins: ['react-refresh'],
   rules: {
     quotes: ['warn', 'single'],
+    'react/react-in-jsx-scope': 0,
+    'react/display-name': 0,
+    'react/self-closing-comp': [
+      'error',
+      {
+        component: true,
+        html: true,
+      },
+    ],
     'jsx-quotes': ['warn', 'prefer-double'],
     'no-console': 'warn',
     'prefer-const': 'warn',

@@ -1,22 +1,23 @@
 import { IconButton, Toolbar } from '@mui/material';
 import { Menu, Search } from '@mui/icons-material';
-import HeaderTitle from '../../UI/Texts/HeaderTitle';
-import HeaderAppBar from '../../UI/Other/HeaderAppBar';
-import ExitButton from '../../UI/Buttons/ExitButton';
-import SearchInput from '../../UI/Inputs/SearchInput';
+import HeaderTitle from './UI/HeaderTitle';
+import HeaderAppBar from './UI/HeaderAppBar';
+import ExitButton from './UI/ExitButton';
+import SearchInput from './UI/SearchInput';
 import style from './Header.module.scss';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { LOGIN } from '../../constants/navigationConstants';
 
 const Header = () => {
   const location = useLocation().pathname;
 
   const navigate = useNavigate();
 
-  const handleExit = () => navigate('/login');
+  const handleExit = () => navigate('/' + LOGIN);
 
   const handleLogo = () => navigate('/');
 
-  if (location === '/login') return;
+  if (location === '/' + LOGIN) return;
 
   return (
     <HeaderAppBar position="absolute" className={style.header}>
@@ -32,9 +33,9 @@ const Header = () => {
           onSubmit={(e: React.SyntheticEvent) => e.preventDefault()}
         >
           <button type="submit" className={style.searchButton}>
-            <Search className={`${style.icon} ${style.searchIcon}`}></Search>
+            <Search className={`${style.icon} ${style.searchIcon}`} />
           </button>
-          <SearchInput placeholder="Поиск"></SearchInput>
+          <SearchInput placeholder="Поиск" />
         </form>
         <ExitButton onClick={handleExit} className={style.exitButton}>
           Выход

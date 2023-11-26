@@ -1,8 +1,8 @@
 import { Grid } from '@mui/material';
 import style from './PeopleElement.module.scss';
 import userPNG from '../../../assets/images/user.jpg';
-import UserNameText from '../../../UI/Texts/UserNameText';
-import UserAgeText from '../../../UI/Texts/UserAgeText';
+import UserNameText from './UI/UserNameText';
+import UserAgeText from './UI/UserAgeText';
 import { MoreVert } from '@mui/icons-material';
 
 const PeopleElement = () => {

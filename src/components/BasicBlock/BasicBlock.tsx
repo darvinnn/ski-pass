@@ -1,6 +1,7 @@
-import AddButton from '../../UI/Buttons/AddButton';
-import ContentTitle from '../../UI/Texts/ContentTitle';
+import AddButton from './UI/AddButton';
+import ContentTitle from './UI/ContentTitle';
 import getContentInfo from '../../utils/getTitle/getContentInfo';
+import BigBlock from '../BigBlock/BigBlock';
 import SmallBlock from '../SmallBlock/SmallBlock';
 import style from './BasicBlock.module.scss';
 
@@ -18,7 +19,7 @@ const BasicBlock = ({ type, size }: Props) => {
         <AddButton>{buttonText}</AddButton>
       </div>
       {size === 'small' && <SmallBlock type={type} />}
-      {/* {size === 'big' && <BigBlock />} */}
+      {size === 'big' && <BigBlock type={type} />}
     </section>
   );
 };
