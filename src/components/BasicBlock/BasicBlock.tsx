@@ -9,9 +9,11 @@ import { ContentSize, ContentType } from '../../types/BasicBlockTypes';
 interface Props {
   type: ContentType;
   size: ContentSize;
+  // TODO: нормально типизировать
+  data?: any;
 }
 
-const BasicBlock = ({ type, size }: Props) => {
+const BasicBlock = ({ type, size, data }: Props) => {
   const { title, buttonText } = getContentInfo(type);
   return (
     <section className={style.section}>
@@ -19,7 +21,7 @@ const BasicBlock = ({ type, size }: Props) => {
         <ContentTitle>{title}</ContentTitle>
         <AddButton>{buttonText}</AddButton>
       </div>
-      {size === 'small' && <SmallBlock type={type} />}
+      {size === 'small' && <SmallBlock data={data} type={type} />}
       {size === 'big' && <BigBlock type={type} />}
     </section>
   );

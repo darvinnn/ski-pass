@@ -13,22 +13,15 @@ import NavLinkText from './UI/NavLinkText';
 import UserName from './UI/UserName';
 import CaptionText from './UI/CaptionText';
 import UserProfession from './UI/UserProfession';
-import { PropsWithChildren, memo, useEffect } from 'react';
+import { PropsWithChildren, memo } from 'react';
 import {
   INSTRUCTORS,
   SKI_PASSES,
   USERS,
 } from '../../constants/navigationConstants';
 import AdminToolbar from '../AdminToolbar/AdminToolbar';
-import axios from 'axios';
 
 const MainInfo = memo(({ children }: PropsWithChildren) => {
-  useEffect(() => {
-    axios.get(
-      'http://192.168.236.16:8484/auth/realms/Spring_boot_realm/protocol/openid-connect/token',
-    );
-  }, []);
-
   return (
     <main className={style.main}>
       <div className={style.blueBg}>

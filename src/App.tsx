@@ -13,14 +13,20 @@ import {
   USERS,
 } from './constants/navigationConstants';
 import HeaderWrapper from './components/HeaderWrapper/HeaderWrapper';
+import { useState } from 'react';
 
 function App() {
+  // TODO: Хардкод, на этой неделе добавлю RTK
+  const [token, setToken] = useState<string>('');
   return (
     <BrowserRouter>
       <StyledEngineProvider injectFirst>
         <Routes>
-          <Route path={LOGIN} element={<Login />} />
-          <Route path="/" element={<HeaderWrapper element={Main} />} />
+          <Route path={LOGIN} element={<Login setToken={setToken} />} />
+          <Route
+            path="/"
+            element={<HeaderWrapper token={token} element={Main} />}
+          />
           <Route path={USERS} element={<HeaderWrapper element={Users} />} />
           <Route
             path={INSTRUCTORS}

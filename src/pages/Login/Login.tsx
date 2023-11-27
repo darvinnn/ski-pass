@@ -9,14 +9,20 @@ import LoginButtomText from './UI/LoginButtomText';
 import { NavLink, useNavigate } from 'react-router-dom';
 import TextInput from '../../UI/Inputs/TextInput';
 import MainButton from '../../UI/Buttons/MainButton';
+import auth from '../../API/auth';
 
-const Login = () => {
+const Login = ({ setToken }) => {
   const navigate = useNavigate();
+
+  // Хардкод потом зарефакторю
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    navigate('/');
+    auth()
+      // TODO: Добавить токен в локал сторедж
+      .then((res) => setToken(res.data.access_token))
+      // Если ставить навигацию, то в консоль ошибки летят, пока не разобрался почему
+      .then(() => navigate('/'));
   };
-
   return (
     <main className={style.login}>
       <section className={style.container}>

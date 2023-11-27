@@ -11,7 +11,7 @@ import { ContentType } from '../../types/BasicBlockTypes';
 interface Props {
   type: ContentType;
 }
-const SmallBlock = ({ type }: Props) => {
+const SmallBlock = ({ type, data }: Props) => {
   const [isHidden, setIsHidden] = useState<boolean>(false);
 
   return (
@@ -28,7 +28,7 @@ const SmallBlock = ({ type }: Props) => {
         </NavLink>
       )}
       {(type === 'instructors' || type === 'users') && !isHidden && (
-        <PeopleGrid />
+        <PeopleGrid data={data} />
       )}
       {type === 'ski-passes' && !isHidden && <SkiPassesGrid />}
     </section>
