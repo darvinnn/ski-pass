@@ -2,9 +2,10 @@ import { PropsWithChildren } from 'react';
 import PeopleGrid from '../PeopleGrid/PeopleGrid';
 import style from './BigBlock.module.scss';
 import SkiPassesGrid from '../SkiPassesGrid/SkiPassesGrid';
+import { ContentType } from '../../types/BasicBlockTypes';
 
 interface Props {
-  type: 'users' | 'instructors' | 'ski-passes';
+  type: ContentType;
 }
 
 const BigBlock = ({ type }: PropsWithChildren<Props>) => {

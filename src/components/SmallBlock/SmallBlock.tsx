@@ -6,9 +6,10 @@ import PeopleGrid from '../PeopleGrid/PeopleGrid';
 import SkiPassesGrid from '../SkiPassesGrid/SkiPassesGrid';
 import { useState } from 'react';
 import { ExpandLess, ExpandMore } from '@mui/icons-material';
+import { ContentType } from '../../types/BasicBlockTypes';
 
 interface Props {
-  type: 'users' | 'instructors' | 'ski-passes';
+  type: ContentType;
 }
 const SmallBlock = ({ type }: Props) => {
   const [isHidden, setIsHidden] = useState<boolean>(false);

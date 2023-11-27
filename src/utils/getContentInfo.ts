@@ -1,5 +1,7 @@
+import { ContentType } from '../types/BasicBlockTypes';
+
 const getContentInfo = (
-  type: 'users' | 'instructors' | 'ski-passes',
+  type: ContentType,
 ): { title: string; buttonText: string } => {
   if (type === 'users')
     return { title: 'Посетители', buttonText: 'Добавить нового' };

@@ -6,7 +6,7 @@ import GoogleIcon from '../../assets/icons/google.svg?react';
 import LoginAccentText from './UI/LoginAccentText';
 import LogitTitleText from './UI/LoginTitleText';
 import LoginButtomText from './UI/LoginButtomText';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import TextInput from '../../UI/Inputs/TextInput';
 import MainButton from '../../UI/Buttons/MainButton';
 
@@ -35,9 +35,9 @@ const Login = () => {
           <FbIcon />
           <VkIcon />
         </div>
-        <a href="#">
+        <NavLink to="#">
           <LoginButtomText>Зарегистрироваться</LoginButtomText>
-        </a>
+        </NavLink>
       </section>
     </main>
   );

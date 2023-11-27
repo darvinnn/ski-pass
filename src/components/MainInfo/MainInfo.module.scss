@@ -3,13 +3,21 @@
 .main {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  flex-grow: 1;
+}
+
+.blueBg {
+  background-color: #4158f6;
+}
+
+.greyBg {
+  background-color: #e8edf1;
 }
 
 .cover {
-  background-color: #4158f6;
-  padding: 125px 0 33px 78px;
-  padding: 125px var(--side-padding) 33px;
+  padding: 61px 0 33px;
+  width: 1024px;
+  margin: 0 auto;
 }
 
 .userInfo {
@@ -41,10 +49,10 @@
 }
 
 .contentBox {
-  padding: 0 var(--side-padding) 41px;
+  padding-bottom: 41px;
   display: flex;
-  background-color: #e8edf1;
-
+  width: 1024px;
+  margin: 0 auto;
   flex-grow: 1;
 }
 
@@ -75,14 +83,6 @@
 
 .navIcon {
   fill: #c2c9ce;
-}
-
-.adminBox {
-  margin: 25px 0 50px;
-}
-
-.adminText {
-  margin-left: 17px;
 }
 
 .mainContent {

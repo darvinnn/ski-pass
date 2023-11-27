@@ -1,15 +1,12 @@
 @import url(../../constants/globalVariables.scss);
 
-.header {
-  padding: 0 var(--side-padding);
-}
-
 .logo {
   cursor: pointer;
   margin-left: 20px;
 }
 
 .toolbar {
+  margin: 0 auto;
   padding-left: 39px;
   padding-right: 49px;
 }
@@ -30,13 +27,6 @@
   height: 30px;
   background-color: #3841dc;
   padding: 5px;
-}
-
-.searchButton {
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  cursor: pointer;
 }
 
 .searchIcon {

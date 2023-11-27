@@ -1,13 +1,14 @@
 import AddButton from './UI/AddButton';
 import ContentTitle from './UI/ContentTitle';
-import getContentInfo from '../../utils/getTitle/getContentInfo';
+import getContentInfo from '../../utils/getContentInfo';
 import BigBlock from '../BigBlock/BigBlock';
 import SmallBlock from '../SmallBlock/SmallBlock';
 import style from './BasicBlock.module.scss';
+import { ContentSize, ContentType } from '../../types/BasicBlockTypes';
 
 interface Props {
-  type: 'users' | 'instructors' | 'ski-passes';
-  size: 'small' | 'big';
+  type: ContentType;
+  size: ContentSize;
 }
 
 const BasicBlock = ({ type, size }: Props) => {
