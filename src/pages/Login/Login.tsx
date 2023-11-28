@@ -20,7 +20,6 @@ const Login = ({ setToken }) => {
     auth()
       // TODO: Добавить токен в локал сторедж
       .then((res) => setToken(res.data.access_token))
-      // Если ставить навигацию, то в консоль ошибки летят, пока не разобрался почему
       .then(() => navigate('/'));
   };
   return (

@@ -6,12 +6,15 @@ import { ContentType } from '../../types/BasicBlockTypes';
 
 interface Props {
   type: ContentType;
+  data?: any;
 }
 
-const BigBlock = ({ type }: PropsWithChildren<Props>) => {
+const BigBlock = ({ type, data }: PropsWithChildren<Props>) => {
   return (
     <section className={style.container}>
-      {(type === 'instructors' || type === 'users') && <PeopleGrid />}
+      {(type === 'instructors' || type === 'users') && (
+        <PeopleGrid data={data} />
+      )}
       {type === 'ski-passes' && <SkiPassesGrid />}
     </section>
   );

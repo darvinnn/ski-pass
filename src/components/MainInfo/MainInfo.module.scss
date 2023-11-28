@@ -12,6 +12,7 @@
 
 .greyBg {
   background-color: #e8edf1;
+  flex-grow: 1;
 }
 
 .cover {
@@ -53,7 +54,6 @@
   display: flex;
   width: 1024px;
   margin: 0 auto;
-  flex-grow: 1;
 }
 
 .sideBar {

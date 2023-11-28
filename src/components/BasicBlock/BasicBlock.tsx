@@ -14,6 +14,7 @@ interface Props {
 }
 
 const BasicBlock = ({ type, size, data }: Props) => {
+  const showedGuests = data.slice(0, 10);
   const { title, buttonText } = getContentInfo(type);
   return (
     <section className={style.section}>
@@ -21,8 +22,8 @@ const BasicBlock = ({ type, size, data }: Props) => {
         <ContentTitle>{title}</ContentTitle>
         <AddButton>{buttonText}</AddButton>
       </div>
-      {size === 'small' && <SmallBlock data={data} type={type} />}
-      {size === 'big' && <BigBlock type={type} />}
+      {size === 'small' && <SmallBlock data={showedGuests} type={type} />}
+      {size === 'big' && <BigBlock data={data} type={type} />}
     </section>
   );
 };
